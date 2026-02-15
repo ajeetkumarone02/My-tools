@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Ludo (4 Players)</h1>
+        <p class="subtitle">Classic rules: entry on 6, captures, safe squares, blockades, exact finish.</p>
+      </header>
+
+      <section class="status-panel">
+        <div><strong>Current player:</strong> <span id="currentPlayer"></span></div>
+        <div><strong>Dice:</strong> <span id="diceValue">-</span></div>
+        <div><strong>Six streak:</strong> <span id="sixStreak">0</span></div>
+        <button id="rollBtn">Roll Dice</button>
+      </section>
+
+      <section>
+        <h2>Board Track (52 squares)</h2>
+        <div id="track" class="track"></div>
+      </section>
+
+      <section>
+        <h2>Home Lanes</h2>
+        <div id="homeLanes" class="home-lanes"></div>
+      </section>
+
+      <section>
+        <h2>Tokens</h2>
+        <div id="tokenPanel" class="token-panel"></div>
+      </section>
+
+      <section>
+        <h2>Game Log</h2>
+        <ul id="log" class="log"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

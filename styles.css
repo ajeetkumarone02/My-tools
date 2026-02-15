@@ -1,0 +1,159 @@
+:root {
+  --red: #d62828;
+  --green: #2a9d8f;
+  --yellow: #e9c46a;
+  --blue: #277da1;
+  --bg: #f8f9fa;
+  --text: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #4b5563;
+}
+
+.status-panel {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+button {
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(64px, 1fr));
+  gap: 0.35rem;
+}
+
+.cell {
+  min-height: 54px;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+  background: #fff;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.cell.safe {
+  outline: 2px solid #f59e0b;
+}
+
+.token-dot {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin-right: 0.15rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.home-lanes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+
+.home-color {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.home-row {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.home-cell {
+  flex: 1;
+  min-height: 36px;
+  border: 1px dashed #94a3b8;
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+  padding: 0.2rem;
+}
+
+.token-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.player-box {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.player-box.active {
+  outline: 3px solid #111827;
+}
+
+.player-box h3 {
+  margin: 0 0 0.5rem;
+}
+
+.tokens {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.token-btn {
+  color: #fff;
+}
+
+.log {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  min-height: 100px;
+}
+
+@media (max-width: 900px) {
+  .track {
+    grid-template-columns: repeat(6, minmax(56px, 1fr));
+  }
+
+  .token-panel,
+  .home-lanes {
+    grid-template-columns: 1fr;
+  }
+}
